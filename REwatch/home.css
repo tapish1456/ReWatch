@@ -1,0 +1,621 @@
+body {
+    margin: 0px;
+    display: grid;
+
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border:#2D283E 10px solid;
+    border-radius:0px 0px 30px 30px;
+    transition: transform 1s ease-in;
+    animation-name: hdbr;
+    animation-duration: 2s;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 30px;
+    overflow: auto;
+    background-color: #2D283E;
+
+
+}
+
+li {
+    float: right;
+}
+
+.header li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+}
+
+.header li a:hover {
+    background-color: #111;
+}
+
+.logo {
+    width: 53px;
+    max-width: 100%;
+    height: auto;
+
+}
+
+img {}
+
+.introSec {
+    position: relative;
+}
+
+
+#rewatchgrp {
+    position: absolute;
+    left: 600px;
+    width: 50px;
+    height: 50px;
+    transition: transform 1s ease-in;
+    animation-name: rwg;
+    animation-duration: 4s;
+}
+
+
+#bgDark1 {
+    animation-name: dbg2;
+    animation-duration: 1.5s;
+    float: left;
+    transition: transform 1s ease-in;
+}
+
+#bgDark2 {
+    position: absolute;
+    top: 180px;
+    float: left;
+    animation-name: dbg2;
+    animation-duration: 2s;
+    transition: transform 1s ease-in;
+}
+
+#bgLight1 {
+    position: absolute;
+    top: 300px;
+    /* float:right; */
+    right: 0px;
+    animation-name: lbg1;
+    animation-duration: 2.5s;
+    transition: transform 1s ease-in;
+}
+
+#bgLight2 {
+    position: absolute;
+    top: 340px;
+    /* float:right; */
+    right: 0px;
+    animation-name: lbg2;
+    animation-duration: 3s;
+    transition: transform 1s ease-in;
+}
+
+#intro1 {
+    font-family: 'Lato', sans-serif;
+    color: #802bb13e;
+    position: absolute;
+    position: absolute;
+    top: 450px;
+    left: 160px;
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+#intro2 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    position: absolute;
+    position: absolute;
+    top: 450px;
+    left: 150px;
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+#intro3 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    position: absolute;
+    top: 550px;
+    left: 150px;
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+#intro4 {
+    font-family: 'Lato', sans-serif;
+    color: #802bb13e;
+    position: absolute;
+    top: 550px;
+    left: 160px;
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+#watchBlack1 {
+    position: absolute;
+    top: 0px;
+    left: 1000px;
+    overflow: hidden;
+    animation-name: wb1;
+    animation-duration: 2s;
+    /* animation-delay: 3s; */
+
+}
+
+#intropara {
+    font-family: 'Lato', sans-serif;
+    color: #8c9ba2;
+    position: absolute;
+    top: 750px;
+    left: 450px;
+    font-size: 2em;
+    align-content: center;
+}
+#intropara:hover {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    position: absolute;
+    top: 750px;
+    left: 450px;
+    font-size: 2em;
+    align-content: center;
+}
+
+
+
+
+/* preset paras..................................... */
+.textPre {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 2em;
+}
+
+.headingPre {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-size: 5em;
+    font-weight: bolder;
+}
+
+/* preset paras..................................... */
+
+/* Hover presets...................................................... */
+
+a {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+  
+  a::before,
+  a::after {
+   content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  a::before {
+    background-color: #54b3d6;
+    height: 2px;
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  a::after {
+    content: attr(data-replace);
+    height: 100%;
+    top: 0;
+    transform-origin: 100% 50%;
+    transform: translate3d(200%, 0, 0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+    color: #54b3d6;
+  }
+  
+  a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+  }
+  a:hover::after {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+  
+  a:hover span {
+    transform: translate3d(-200%, 0, 0);
+  }
+  
+  /* Presentational Styles */
+  body {
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    line-height: 1.5;
+    height: 100vh;
+    place-items: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #18272F;
+    font-weight: 700;
+    vertical-align: top;
+  }
+
+/* Hover presets...................................................... */
+
+
+
+#randomPara {
+    /* clear: both; */
+    padding-top: 1000px;
+    animation-name: rp1;
+    animation-duration: 1.5s;
+    transition: transform 1s ease-in;
+}
+
+#randompara1 {
+    color: #2D283E;
+    /* margin-top: 500px; */
+    margin-left: 200px;
+    width: 50%;
+}
+
+#randomheading1 {
+    color: #2D283E;
+    margin-top: 300px;
+    margin-left: 200px;
+    width: 50%;
+}
+
+#specs {
+    position: inherit;
+    top: 10px;
+    left: 1000px;
+    overflow: auto;
+}
+
+
+
+
+/* footer................................................. */
+.footer {
+    background-color: #2D283E;
+    padding: 50px;
+
+}
+
+.footer ul li {
+    color: white;
+    size: 20px;
+    text-decoration: none;
+}
+
+
+.footercls {
+    display: grid;
+    gap: 30px 10px;
+    grid-template-columns: auto auto auto;
+    font-size: 20px;
+}
+
+
+
+.footer li a {
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.footer li a:hover {
+    color: gray;
+}
+
+/* footer................................................. */
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 30px;
+
+    background-color: #2D283E;
+}
+
+.header {
+    background-color: #2D283E;
+
+
+}
+
+.header ul li {
+    color: white;
+    size: 20px;
+    text-decoration: none;
+}
+
+
+.headercls {
+    display: grid;
+    gap: 30px 20px;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    font-size: 20px;
+    padding-top: 20px;
+    align-content: space-between;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.header li a {
+
+    color: white;
+    text-decoration: none;
+
+
+}
+
+.header li a:hover {
+    color: #802bb1e1;
+}
+
+#rewatchname {
+    grid-column: 2 / 11;
+}
+
+.logo {
+    width: 53px;
+    max-width: 100%;
+    height: auto;
+    margin-top: -10px;
+}
+
+#myBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 500px;
+    font-size: 18px;
+}
+
+#myBtn:hover {
+    background-color: #555;
+    /* Add a dark-grey background on hover */
+}
+
+/* 
+  button................................ */
+
+
+
+
+/* animation................................................................ */
+
+@keyframes rwg {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes lbg1 {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes lbg2 {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes dbg1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes dbg2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes hdbr{
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }    
+}
+
+@keyframes wb1{
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }    
+}
+@keyframes rp1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/* animation................................................................ */
+
+
+
+
+/* Hover classes............................................... */
+.smallestHover{
+    transition: transform .6s;
+}
+
+.smallHover{
+    transition: transform .6s;
+}
+
+.largeHover{
+    transition: transform .6s;
+}
+
+.smallestHover:hover{
+    transform: scale(1.05);
+
+}
+
+.smallHover:hover{
+    transform: scale(1.15);
+
+}
+.largeHover:hover{
+    transform: scale(1.25); 
+}
+/* Hover classes............................................... */
+
+
+body {font-family: 'Lato', sans-serif; color: white;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #802bb1;
+  color: white;
+  padding: 16px 20px;
+  border: 2px solid #18272F;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0.8;
+  /* position: fixed;
+  bottom: 23px;
+  right: 28px; */
+  width: 80px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #802bb15b;
+  border-radius: 5%;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px 30px;
+  background-color: #18272f8f;
+  border-radius: 5%;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: 2px solid #802bb1;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 50%;
+  margin-bottom:10px;
+  opacity: 0.6;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

@@ -1,0 +1,151 @@
+body{
+    padding :50px 150px;
+    margin :10px;
+    /* background-color : #802bb1; */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+  }
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  .form{
+      padding : 70px 200px;
+    margin:20px;
+    background-color : #564f6f35;
+    /* background-color : #D1d7e0; */
+    overflow:hidden;
+    opacity: .5;
+    transition: transform 1s ;
+  }
+  .form:hover{
+    padding : 70px 200px;
+  margin:20px;
+  background-color : #349b6d4d;
+  /* background-color : #D1d7e0; */
+  overflow:hidden;
+  opacity: 1;
+  transform: scale(1.03);
+
+
+}
+
+  input:not([type="checkbox"]){
+      width : 100%;
+    border: 2px solid #564f6f;
+    padding :10px;
+    margin: 10px;
+  }
+  label{
+    margin-left:10px; 
+  }
+  
+  
+/* preset paras..................................... */
+.textPre {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  /* font-size: 2em; */
+}
+
+.headingPre {
+  font-family: 'Lato', sans-serif;
+  color: white;
+  font-size: 5em;
+  font-weight: bolder;
+}
+
+/* preset paras..................................... */
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+ 
+  padding: 5px 20px 15px 20px;
+
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
