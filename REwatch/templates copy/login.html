@@ -1,0 +1,18 @@
+
+    <h1>{{data}}</h1>
+
+          <form action="/query" method="post">
+            <h3>username</h3>
+            <input type="text" name="user_input" />
+            <input type="submit" value="login" />
+          </form>
+
+    <div id="login-tab1"></div>
+    <br /><br />
+    <h1 id="output"></h1>
+
+    <div id="login-tab2" style="display: none">
+      <p>login success</p>
+      <button type="submit" onclick="logout()">log out</button>
+    </div>
+
